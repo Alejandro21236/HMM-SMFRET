@@ -1,0 +1,9 @@
+n_lobe = u.select_atoms("resid 1:113")            # REC lobe (REC1+REC2+start of REC3)
+linker1 = u.select_atoms("resid 114:140")         # REC → Bridge/PI linker
+bridge_helix = u.select_atoms("resid 60:93")      # Overlaps with REC
+hnh_domain = u.select_atoms("resid 775:909")      # HNH (mobile cleavage domain)
+linker2 = u.select_atoms("resid 770:774")         # Short linker before HNH
+ruvc_domain = u.select_atoms("resid 917:1098")    # RuvC cleavage domain
+res_donor = u.select_atoms("resid 34 and name CA")    # Candidate donor FRET site (REC1)
+res_acceptor = u.select_atoms("resid 900") # Candidate acceptor (HNH tip)
+c_lobe = u.select_atoms("resid 770:1098")
